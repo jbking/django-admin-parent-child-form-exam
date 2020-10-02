@@ -1,3 +1,16 @@
 from django.contrib import admin
 
-# Register your models here.
+from myapp.models import Item, ItemHistory
+
+
+class ItemAdmin(admin.ModelAdmin):
+    pass
+
+
+class ItemHistoryAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Item, ItemAdmin)
+admin.site.register(ItemHistory, ItemHistoryAdmin)
+
